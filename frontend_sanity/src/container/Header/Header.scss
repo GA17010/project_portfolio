@@ -15,13 +15,20 @@
   }
 }
 
+#home.dark-mode {
+  background: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
 .app__header {
   flex: 1;
   width: 100%;
   height: 100%;
   flex-direction: row;
 
-  padding: 6rem 2rem 0rem;
+  padding: 5rem 2rem 0rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -126,20 +133,32 @@
   }
 
   div:nth-child(2) {
-    margin: 1.75rem;
-    width: 150px;
-    height: 150px;
-  }
-
-  div:nth-child(3) {
+    margin-left: 5rem;
     width: 70px;
     height: 70px;
   }
 
+  div:nth-child(3) {
+    margin-inline: 4rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  div:nth-child(4) {
+    margin-left: 5rem;
+    width: 70px;
+    height: 70px;
+  }
+
+  div:nth-child(5) {
+    width: 100px;
+    height: 100px;
+  }
+
   @media screen and (min-width: 2000px) {
     div:nth-child(2) {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
     }
 
     div:nth-child(3) {
@@ -178,6 +197,7 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    padding-bottom: 3rem;
   }
 
   .overlay_circle {
