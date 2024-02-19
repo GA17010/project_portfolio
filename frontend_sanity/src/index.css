@@ -10,6 +10,8 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --rgb-color: rgba(0, 0, 0, 0.5);
+  --rgb2-color: #fff;
 }
 
 * {
@@ -18,6 +20,18 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+body.dark {
+  --primary-color: #1a202c;
+  --secondary-color: #bbabab;
+  --black-color: #f6f6f6;
+  --lightGray-color: #b8b7b7;
+  --gray-color: #f6f6f6d7;
+  --brown-color: #46364a;
+  --white-color: #1a1818;
+  --rgb-color: rgba(255, 255, 255, 0.3);
+  --rgb2-color: rgb(170, 170, 170);
 }
 
 body {
