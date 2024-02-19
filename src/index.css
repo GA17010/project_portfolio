@@ -12,6 +12,7 @@
   --white-color: #ffffff;
   --rgb-color: rgba(0, 0, 0, 0.5);
   --rgb2-color: #fff;
+  --hover-color: #fef4f5;
 }
 
 * {
@@ -32,6 +33,7 @@ body.dark {
   --white-color: #1a1818;
   --rgb-color: rgba(255, 255, 255, 0.3);
   --rgb2-color: rgb(170, 170, 170);
+  --hover-color: #6b7688;
 }
 
 body {
