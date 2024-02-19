@@ -2,8 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# this project use node version 18.0.0
-
+# This project uses node version 18.0.0
 
 ## Available Scripts
 
