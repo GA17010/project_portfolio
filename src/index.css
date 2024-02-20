@@ -13,6 +13,8 @@
   --rgb-color: rgba(0, 0, 0, 0.5);
   --rgb2-color: #fff;
   --hover-color: #fef4f5;
+
+  --background-home: url("./assets/bgIMG.png");
 }
 
 * {
@@ -23,7 +25,7 @@
   scroll-behavior: smooth;
 }
 
-body.dark {
+.dark {
   --primary-color: #1a202c;
   --secondary-color: #bbabab;
   --black-color: #f6f6f6;
@@ -34,6 +36,8 @@ body.dark {
   --rgb-color: rgba(255, 255, 255, 0.3);
   --rgb2-color: rgb(170, 170, 170);
   --hover-color: #6b7688;
+
+  --background-home: #0f0f0f;
 }
 
 body {

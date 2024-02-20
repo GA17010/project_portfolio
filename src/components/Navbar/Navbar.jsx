@@ -2,37 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { HiMenuAlt4, HiX, HiSun, HiOutlineMoon } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
+import { useDispatch, useSelector } from 'react-redux'
+import { changeDarkmode } from '../../redux/modeDark/darkSlide.ts'
+
 import { images } from '../../constants';
 import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-
-  const [darkMode, setDarkMode] = useState(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    return isDarkMode;
-  });
+  const dispatch = useDispatch()
+  const darkMode = useSelector((state) => state.dark.value);
 
   useEffect(() => {
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const homeElement = document.getElementById('home');
-    
-    if (!localStorage.getItem('darkMode')) {
-      setDarkMode(prefersDarkMode); 
-    }
-
-    if (darkMode) {
-      document.body.classList.add('dark');
-      homeElement.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-      homeElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    dispatch(changeDarkmode(isDarkMode))
+  }, [dispatch]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem('darkMode', !darkMode);
+    const newMode = !darkMode;
+    localStorage.setItem('darkMode', newMode);
+    dispatch(changeDarkmode(newMode))
   };
 
   return (
